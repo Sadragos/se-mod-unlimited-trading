@@ -1,0 +1,468 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Components>
+      <Component>
+        <Id>
+          <TypeId>Ore</TypeId>
+          <SubtypeId>PackStone</SubtypeId>
+        </Id>
+        <DisplayName>Packed Stone</DisplayName>
+        <Icon>Textures\ore_rock_compressed.dds</Icon>
+        <Size>
+          <X>1</X>
+          <Y>0.7</Y>
+          <Z>0.4</Z>
+        </Size>
+        <Mass>1050</Mass>
+        <Volume>277.5</Volume>
+        <Model>Models\Components\ContractPackage.mwm</Model>
+        <PhysicalMaterial>Metal</PhysicalMaterial>
+        <MaxIntegrity>500</MaxIntegrity>
+        <DropProbability>1</DropProbability>
+        <Health>1000</Health>
+        <CanPlayerOrder>true</CanPlayerOrder>
+      </Component>
+      
+      <Component>
+        <Id>
+          <TypeId>Ore</TypeId>
+          <SubtypeId>PackIce</SubtypeId>
+        </Id>
+        <DisplayName>Packed Ice</DisplayName>
+        <Icon>Textures\ore_H2O_ice_compressed.dds</Icon>
+        <Size>
+          <X>1</X>
+          <Y>0.7</Y>
+          <Z>0.4</Z>
+        </Size>
+        <Mass>1050</Mass>
+        <Volume>277.5</Volume>
+        <Model>Models\Components\ContractPackage.mwm</Model>
+        <PhysicalMaterial>Metal</PhysicalMaterial>
+        <MaxIntegrity>500</MaxIntegrity>
+        <DropProbability>1</DropProbability>
+        <Health>1000</Health>
+        <CanPlayerOrder>true</CanPlayerOrder>
+      </Component>
+
+      <Component>
+        <Id>
+          <TypeId>Ore</TypeId>
+          <SubtypeId>PackIron</SubtypeId>
+        </Id>
+        <DisplayName>Packed Iron Ore</DisplayName>
+        <Icon>Textures\ore_Fe_iron_compressed.dds</Icon>
+        <Size>
+          <X>1</X>
+          <Y>0.7</Y>
+          <Z>0.4</Z>
+        </Size>
+        <Mass>1050</Mass>
+        <Volume>277.5</Volume>
+        <Model>Models\Components\ContractPackage.mwm</Model>
+        <PhysicalMaterial>Metal</PhysicalMaterial>
+        <MaxIntegrity>500</MaxIntegrity>
+        <DropProbability>1</DropProbability>
+        <Health>1000</Health>
+        <CanPlayerOrder>true</CanPlayerOrder>
+      </Component>
+    
+      <Component>
+        <Id>
+          <TypeId>Ore</TypeId>
+          <SubtypeId>PackNickel</SubtypeId>
+        </Id>
+        <DisplayName>Packed Nickel Ore</DisplayName>
+        <Icon>Textures\ore_Ni_nickel_compressed.dds</Icon>
+        <Size>
+          <X>1</X>
+          <Y>0.7</Y>
+          <Z>0.4</Z>
+        </Size>
+        <Mass>1050</Mass>
+        <Volume>277.5</Volume>
+        <Model>Models\Components\ContractPackage.mwm</Model>
+        <PhysicalMaterial>Metal</PhysicalMaterial>
+        <MaxIntegrity>500</MaxIntegrity>
+        <DropProbability>1</DropProbability>
+        <Health>1000</Health>
+        <CanPlayerOrder>true</CanPlayerOrder>
+      </Component>
+    
+      <Component>
+        <Id>
+          <TypeId>Ore</TypeId>
+          <SubtypeId>PackCobalt</SubtypeId>
+        </Id>
+        <DisplayName>Packed Cobalt Ore</DisplayName>
+        <Icon>Textures\ore_Co_cobalt_compressed.dds</Icon>
+        <Size>
+          <X>1</X>
+          <Y>0.7</Y>
+          <Z>0.4</Z>
+        </Size>
+        <Mass>1050</Mass>
+        <Volume>277.5</Volume>
+        <Model>Models\Components\ContractPackage.mwm</Model>
+        <PhysicalMaterial>Metal</PhysicalMaterial>
+        <MaxIntegrity>500</MaxIntegrity>
+        <DropProbability>1</DropProbability>
+        <Health>1000</Health>
+        <CanPlayerOrder>true</CanPlayerOrder>
+      </Component>
+    
+      <Component>
+        <Id>
+          <TypeId>Ore</TypeId>
+          <SubtypeId>PackMagnesium</SubtypeId>
+        </Id>
+        <DisplayName>Packed Magnesium Ore</DisplayName>
+        <Icon>Textures\ore_Mg_magnesium_compressed.dds</Icon>
+        <Size>
+          <X>1</X>
+          <Y>0.7</Y>
+          <Z>0.4</Z>
+        </Size>
+        <Mass>1050</Mass>
+        <Volume>277.5</Volume>
+        <Model>Models\Components\ContractPackage.mwm</Model>
+        <PhysicalMaterial>Metal</PhysicalMaterial>
+        <MaxIntegrity>500</MaxIntegrity>
+        <DropProbability>1</DropProbability>
+        <Health>1000</Health>
+        <CanPlayerOrder>true</CanPlayerOrder>
+      </Component>
+
+      <Component>
+        <Id>
+          <TypeId>Ore</TypeId>
+          <SubtypeId>PackSilicon</SubtypeId>
+        </Id>
+        <DisplayName>Packed Silicon Ore</DisplayName>
+        <Icon>Textures\ore_Si_silicon_compressed.dds</Icon>
+        <Size>
+          <X>1</X>
+          <Y>0.7</Y>
+          <Z>0.4</Z>
+        </Size>
+        <Mass>1050</Mass>
+        <Volume>277.5</Volume>
+        <Model>Models\Components\ContractPackage.mwm</Model>
+        <PhysicalMaterial>Metal</PhysicalMaterial>
+        <MaxIntegrity>500</MaxIntegrity>
+        <DropProbability>1</DropProbability>
+        <Health>1000</Health>
+        <CanPlayerOrder>true</CanPlayerOrder>
+      </Component>
+    
+      <Component>
+        <Id>
+          <TypeId>Ore</TypeId>
+          <SubtypeId>PackSilver</SubtypeId>
+        </Id>
+        <DisplayName>Packed Silver Ore</DisplayName>
+        <Icon>Textures\ore_Ag_silver_compressed.dds</Icon>
+        <Size>
+          <X>1</X>
+          <Y>0.7</Y>
+          <Z>0.4</Z>
+        </Size>
+        <Mass>1050</Mass>
+        <Volume>277.5</Volume>
+        <Model>Models\Components\ContractPackage.mwm</Model>
+        <PhysicalMaterial>Metal</PhysicalMaterial>
+        <MaxIntegrity>500</MaxIntegrity>
+        <DropProbability>1</DropProbability>
+        <Health>1000</Health>
+        <CanPlayerOrder>true</CanPlayerOrder>
+      </Component>
+
+      <Component>
+        <Id>
+          <TypeId>Ore</TypeId>
+          <SubtypeId>PackGold</SubtypeId>
+        </Id>
+        <DisplayName>Packed Gold Ore</DisplayName>
+        <Icon>Textures\ore_Au_gold_compressed.dds</Icon>
+        <Size>
+          <X>1</X>
+          <Y>0.7</Y>
+          <Z>0.4</Z>
+        </Size>
+        <Mass>1050</Mass>
+        <Volume>277.5</Volume>
+        <Model>Models\Components\ContractPackage.mwm</Model>
+        <PhysicalMaterial>Metal</PhysicalMaterial>
+        <MaxIntegrity>500</MaxIntegrity>
+        <DropProbability>1</DropProbability>
+        <Health>1000</Health>
+        <CanPlayerOrder>true</CanPlayerOrder>
+      </Component>
+    
+      <Component>
+        <Id>
+          <TypeId>Ore</TypeId>
+          <SubtypeId>PackPlatinum</SubtypeId>
+        </Id>
+        <DisplayName>Packed Platinum Ore</DisplayName>
+        <Icon>Textures\ore_Pt_platinum_compressed.dds</Icon>
+        <Size>
+          <X>1</X>
+          <Y>0.7</Y>
+          <Z>0.4</Z>
+        </Size>
+        <Mass>1050</Mass>
+        <Volume>277.5</Volume>
+        <Model>Models\Components\ContractPackage.mwm</Model>
+        <PhysicalMaterial>Metal</PhysicalMaterial>
+        <MaxIntegrity>500</MaxIntegrity>
+        <DropProbability>1</DropProbability>
+        <Health>1000</Health>
+        <CanPlayerOrder>true</CanPlayerOrder>
+      </Component>
+    
+      <Component>
+        <Id>
+          <TypeId>Ore</TypeId>
+          <SubtypeId>PackUranium</SubtypeId>
+        </Id>
+        <DisplayName>Packed Uranium Ore</DisplayName>
+        <Icon>Textures\ore_UO2_uranite_compressed.dds</Icon>
+        <Size>
+          <X>1</X>
+          <Y>0.7</Y>
+          <Z>0.4</Z>
+        </Size>
+        <Mass>1050</Mass>
+        <Volume>277.5</Volume>
+        <Model>Models\Components\ContractPackage.mwm</Model>
+        <PhysicalMaterial>Metal</PhysicalMaterial>
+        <MaxIntegrity>500</MaxIntegrity>
+        <DropProbability>1</DropProbability>
+        <Health>1000</Health>
+        <CanPlayerOrder>true</CanPlayerOrder>
+      </Component>
+    
+      
+    
+<Component>
+        <Id>
+          <TypeId>Ingot</TypeId>
+          <SubtypeId>PackStone</SubtypeId>
+        </Id>
+        <DisplayName>Packed Gravel</DisplayName>
+        <Icon>Textures\gravel_ingot_compressed.dds</Icon>
+        <Size>
+          <X>1</X>
+          <Y>0.7</Y>
+          <Z>0.4</Z>
+        </Size>
+        <Mass>1050</Mass>
+        <Volume>277.5</Volume>
+        <Model>Models\Components\ContractPackage.mwm</Model>
+        <PhysicalMaterial>Metal</PhysicalMaterial>
+        <MaxIntegrity>500</MaxIntegrity>
+        <DropProbability>1</DropProbability>
+        <Health>1000</Health>
+        <CanPlayerOrder>true</CanPlayerOrder>
+      </Component>
+<Component>
+        <Id>
+          <TypeId>Ingot</TypeId>
+          <SubtypeId>PackIron</SubtypeId>
+        </Id>
+        <DisplayName>Packed Iron Ingots</DisplayName>
+        <Icon>Textures\iron_ingot_compressed.dds</Icon>
+        <Size>
+          <X>1</X>
+          <Y>0.7</Y>
+          <Z>0.4</Z>
+        </Size>
+        <Mass>1050</Mass>
+        <Volume>95.25</Volume>
+        <Model>Models\Components\ContractPackage.mwm</Model>
+        <PhysicalMaterial>Metal</PhysicalMaterial>
+        <MaxIntegrity>500</MaxIntegrity>
+        <DropProbability>1</DropProbability>
+        <Health>1000</Health>
+        <CanPlayerOrder>true</CanPlayerOrder>
+      </Component>
+    
+      <Component>
+        <Id>
+          <TypeId>Ingot</TypeId>
+          <SubtypeId>PackNickel</SubtypeId>
+        </Id>
+        <DisplayName>Packed Nickel Ingots</DisplayName>
+        <Icon>Textures\nickel_ingot_compressed.dds</Icon>
+        <Size>
+          <X>1</X>
+          <Y>0.7</Y>
+          <Z>0.4</Z>
+        </Size>
+        <Mass>1050</Mass>
+        <Volume>84</Volume>
+        <Model>Models\Components\ContractPackage.mwm</Model>
+        <PhysicalMaterial>Metal</PhysicalMaterial>
+        <MaxIntegrity>500</MaxIntegrity>
+        <DropProbability>1</DropProbability>
+        <Health>1000</Health>
+        <CanPlayerOrder>true</CanPlayerOrder>
+      </Component>
+    
+      <Component>
+        <Id>
+          <TypeId>Ingot</TypeId>
+          <SubtypeId>PackCobalt</SubtypeId>
+        </Id>
+        <DisplayName>Packed Cobalt Ingots</DisplayName>
+        <Icon>Textures\cobalt_ingot_compressed.dds</Icon>
+        <Size>
+          <X>1</X>
+          <Y>0.7</Y>
+          <Z>0.4</Z>
+        </Size>
+        <Mass>1050</Mass>
+        <Volume>84</Volume>
+        <Model>Models\Components\ContractPackage.mwm</Model>
+        <PhysicalMaterial>Metal</PhysicalMaterial>
+        <MaxIntegrity>500</MaxIntegrity>
+        <DropProbability>1</DropProbability>
+        <Health>1000</Health>
+        <CanPlayerOrder>true</CanPlayerOrder>
+      </Component>
+    
+      <Component>
+        <Id>
+          <TypeId>Ingot</TypeId>
+          <SubtypeId>PackMagnesium</SubtypeId>
+        </Id>
+        <DisplayName>Packed Magnesium Ingots</DisplayName>
+        <Icon>Textures\magnesium_ingot_compressed.dds</Icon>
+        <Size>
+          <X>1</X>
+          <Y>0.7</Y>
+          <Z>0.4</Z>
+        </Size>
+        <Mass>1050</Mass>
+        <Volume>431.25</Volume>
+        <Model>Models\Components\ContractPackage.mwm</Model>
+        <PhysicalMaterial>Metal</PhysicalMaterial>
+        <MaxIntegrity>500</MaxIntegrity>
+        <DropProbability>1</DropProbability>
+        <Health>1000</Health>
+        <CanPlayerOrder>true</CanPlayerOrder>
+      </Component>
+
+      <Component>
+        <Id>
+          <TypeId>Ingot</TypeId>
+          <SubtypeId>PackSilicon</SubtypeId>
+        </Id>
+        <DisplayName>Packed Silicon Ingots</DisplayName>
+        <Icon>Textures\silicon_ingot_compressed.dds</Icon>
+        <Size>
+          <X>1</X>
+          <Y>0.7</Y>
+          <Z>0.4</Z>
+        </Size>
+        <Mass>1050</Mass>
+        <Volume>321.75</Volume>
+        <Model>Models\Components\ContractPackage.mwm</Model>
+        <PhysicalMaterial>Metal</PhysicalMaterial>
+        <MaxIntegrity>500</MaxIntegrity>
+        <DropProbability>1</DropProbability>
+        <Health>1000</Health>
+        <CanPlayerOrder>true</CanPlayerOrder>
+      </Component>
+    
+      <Component>
+        <Id>
+          <TypeId>Ingot</TypeId>
+          <SubtypeId>PackSilver</SubtypeId>
+        </Id>
+        <DisplayName>Packed Silver Ingots</DisplayName>
+        <Icon>Textures\silver_ingot_compressed.dds</Icon>
+        <Size>
+          <X>1</X>
+          <Y>0.7</Y>
+          <Z>0.4</Z>
+        </Size>
+        <Mass>1050</Mass>
+        <Volume>71.25</Volume>
+        <Model>Models\Components\ContractPackage.mwm</Model>
+        <PhysicalMaterial>Metal</PhysicalMaterial>
+        <MaxIntegrity>500</MaxIntegrity>
+        <DropProbability>1</DropProbability>
+        <Health>1000</Health>
+        <CanPlayerOrder>true</CanPlayerOrder>
+      </Component>
+
+      <Component>
+        <Id>
+          <TypeId>Ingot</TypeId>
+          <SubtypeId>PackGold</SubtypeId>
+        </Id>
+        <DisplayName>Packed Gold Ingots</DisplayName>
+        <Icon>Textures\gold_ingot_compressed.dds</Icon>
+        <Size>
+          <X>1</X>
+          <Y>0.7</Y>
+          <Z>0.4</Z>
+        </Size>
+        <Mass>1050</Mass>
+        <Volume>39</Volume>
+        <Model>Models\Components\ContractPackage.mwm</Model>
+        <PhysicalMaterial>Metal</PhysicalMaterial>
+        <MaxIntegrity>500</MaxIntegrity>
+        <DropProbability>1</DropProbability>
+        <Health>1000</Health>
+        <CanPlayerOrder>true</CanPlayerOrder>
+      </Component>
+    
+      <Component>
+        <Id>
+          <TypeId>Ingot</TypeId>
+          <SubtypeId>PackPlatinum</SubtypeId>
+        </Id>
+        <DisplayName>Packed Platinum Ingots</DisplayName>
+        <Icon>Textures\platinum_ingot_compressed.dds</Icon>
+        <Size>
+          <X>1</X>
+          <Y>0.7</Y>
+          <Z>0.4</Z>
+        </Size>
+        <Mass>1050</Mass>
+        <Volume>35.25</Volume>
+        <Model>Models\Components\ContractPackage.mwm</Model>
+        <PhysicalMaterial>Metal</PhysicalMaterial>
+        <MaxIntegrity>500</MaxIntegrity>
+        <DropProbability>1</DropProbability>
+        <Health>1000</Health>
+        <CanPlayerOrder>true</CanPlayerOrder>
+      </Component>
+    
+      <Component>
+        <Id>
+          <TypeId>Ingot</TypeId>
+          <SubtypeId>PackUranium</SubtypeId>
+        </Id>
+        <DisplayName>Packed Uranium Ingots</DisplayName>
+        <Icon>Textures\uranium_ingot_compressed.dds</Icon>
+        <Size>
+          <X>1</X>
+          <Y>0.7</Y>
+          <Z>0.4</Z>
+        </Size>
+        <Mass>1050</Mass>
+        <Volume>39</Volume>
+        <Model>Models\Components\ContractPackage.mwm</Model>
+        <PhysicalMaterial>Metal</PhysicalMaterial>
+        <MaxIntegrity>500</MaxIntegrity>
+        <DropProbability>1</DropProbability>
+        <Health>1000</Health>
+        <CanPlayerOrder>true</CanPlayerOrder>
+      </Component>
+      
+    </Components>
+</Definitions>

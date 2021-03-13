@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E289880D-0A24-4DE5-8C9A-DDB5039BE998}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Epsilon_Trading</RootNamespace>
+    <AssemblyName>Epsilon Trading</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Data\BlueprintClasses.sbc" />
+    <None Include="Data\Blueprints.sbc" />
+    <None Include="Data\Components.sbc" />
+    <None Include="Data\CubeBlocks_Assembler.sbc" />
+    <None Include="Data\Scripts\UnlimitedTrading\CompactInventory.cs.bak" />
+    <None Include="Data\SessionComponents_Economy.sbc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="metadata.mod" />
+    <Content Include="Textures\assembler_compressed.dds" />
+    <Content Include="Textures\cobalt_ingot_compressed.dds" />
+    <Content Include="Textures\compressed.dds" />
+    <Content Include="Textures\compressed_focus.dds" />
+    <Content Include="Textures\gold_ingot_compressed.dds" />
+    <Content Include="Textures\gravel_ingot_compressed.dds" />
+    <Content Include="Textures\iron_ingot_compressed.dds" />
+    <Content Include="Textures\magnesium_ingot_compressed.dds" />
+    <Content Include="Textures\nickel_ingot_compressed.dds" />
+    <Content Include="Textures\ore_Ag_silver_compressed.dds" />
+    <Content Include="Textures\ore_Au_gold_compressed.dds" />
+    <Content Include="Textures\ore_Co_cobalt_compressed.dds" />
+    <Content Include="Textures\ore_Fe_iron_compressed.dds" />
+    <Content Include="Textures\ore_H2O_ice_compressed.dds" />
+    <Content Include="Textures\ore_Mg_magnesium_compressed.dds" />
+    <Content Include="Textures\ore_Ni_nickel_compressed.dds" />
+    <Content Include="Textures\ore_Pt_platinum_compressed.dds" />
+    <Content Include="Textures\ore_rock_compressed.dds" />
+    <Content Include="Textures\ore_Si_silicon_compressed.dds" />
+    <Content Include="Textures\ore_UO2_uranite_compressed.dds" />
+    <Content Include="Textures\platinum_ingot_compressed.dds" />
+    <Content Include="Textures\silicon_ingot_compressed.dds" />
+    <Content Include="Textures\silver_ingot_compressed.dds" />
+    <Content Include="Textures\uranium_ingot_compressed.dds" />
+    <Content Include="thumb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ProtoBuf.Net">
+      <HintPath>..\..\Libraries\ProtoBuf.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ProtoBuf.Net.Core">
+      <HintPath>..\..\Libraries\ProtoBuf.Net.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Sandbox.Common">
+      <HintPath>..\..\Libraries\Sandbox.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Sandbox.Game">
+      <HintPath>..\..\Libraries\Sandbox.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="Sandbox.Game.XmlSerializers">
+      <HintPath>..\..\Libraries\Sandbox.Game.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="Sandbox.Graphics">
+      <HintPath>..\..\Libraries\Sandbox.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="Sandbox.RenderDirect">
+      <HintPath>..\..\Libraries\Sandbox.RenderDirect.dll</HintPath>
+    </Reference>
+    <Reference Include="SpaceEngineers.Game">
+      <HintPath>..\..\Libraries\SpaceEngineers.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="SpaceEngineers.ObjectBuilders">
+      <HintPath>..\..\Libraries\SpaceEngineers.ObjectBuilders.dll</HintPath>
+    </Reference>
+    <Reference Include="SpaceEngineers.ObjectBuilders.XmlSerializers">
+      <HintPath>..\..\Libraries\SpaceEngineers.ObjectBuilders.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="VRage">
+      <HintPath>..\..\Libraries\VRage.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Ansel">
+      <HintPath>..\..\Libraries\VRage.Ansel.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Audio">
+      <HintPath>..\..\Libraries\VRage.Audio.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Game">
+      <HintPath>..\..\Libraries\VRage.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Game.XmlSerializers">
+      <HintPath>..\..\Libraries\VRage.Game.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Input">
+      <HintPath>..\..\Libraries\VRage.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Library">
+      <HintPath>..\..\Libraries\VRage.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Math">
+      <HintPath>..\..\Libraries\VRage.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Math.XmlSerializers">
+      <HintPath>..\..\Libraries\VRage.Math.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Mod.Io">
+      <HintPath>..\..\Libraries\VRage.Mod.Io.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.NativeAftermath">
+      <HintPath>..\..\Libraries\VRage.NativeAftermath.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.NativeWrapper">
+      <HintPath>..\..\Libraries\VRage.NativeWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Network">
+      <HintPath>..\..\Libraries\VRage.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Platform.Windows">
+      <HintPath>..\..\Libraries\VRage.Platform.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Render">
+      <HintPath>..\..\Libraries\VRage.Render.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Render11">
+      <HintPath>..\..\Libraries\VRage.Render11.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Scripting">
+      <HintPath>..\..\Libraries\VRage.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.Steam">
+      <HintPath>..\..\Libraries\VRage.Steam.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.UserInterface">
+      <HintPath>..\..\Libraries\VRage.UserInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="VRage.XmlSerializers">
+      <HintPath>..\..\Libraries\VRage.XmlSerializers.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Scripts\UnlimitedTrading\Core.cs" />
+    <Compile Include="Data\Scripts\UnlimitedTrading\Logging.cs" />
+    <Compile Include="Data\Scripts\UnlimitedTrading\MessageData.cs" />
+    <Compile Include="Data\Scripts\UnlimitedTrading\NoMinPrice.cs" />
+    <Compile Include="Data\Scripts\UnlimitedTrading\Utilities.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

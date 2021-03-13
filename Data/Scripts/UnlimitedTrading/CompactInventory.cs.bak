@@ -1,0 +1,262 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using Sandbox.Common.ObjectBuilders;
+using Sandbox.Game.EntityComponents;
+using Sandbox.ModAPI;
+using Sandbox.ModAPI.Interfaces;
+using Sandbox.ModAPI.Interfaces.Terminal;
+using VRage.Game;
+using VRage.Game.Components;
+using VRage.Game.ModAPI;
+using VRage.Game.ModAPI.Ingame;
+using VRage.ModAPI;
+using VRage.ObjectBuilders;
+using VRage.Utils;
+using VRage;
+
+namespace UnlimitedTrading
+{
+    [MyEntityComponentDescriptor(typeof(MyObjectBuilder_CargoContainer), false)]
+    public class BlockUpgradHandler : MyGameLogicComponent
+    {
+        private static bool init = false;
+
+
+        IMyCargoContainer block;
+        List<MyInventoryItem> items = new List<MyInventoryItem>();
+        Dictionary<string, PackItem> itemStore = new Dictionary<string, PackItem>();
+
+        public void Buttons()
+        {
+
+            var btnSwitch = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlOnOffSwitch, IMyCargoContainer>("terminal_do_compress");
+            btnSwitch.OnText = MyStringId.GetOrCompute("On");
+            btnSwitch.OffText = MyStringId.GetOrCompute("Off");
+            btnSwitch.Title = MyStringId.GetOrCompute("Packing");
+            btnSwitch.Tooltip = MyStringId.GetOrCompute("Compacts extra Ores and Ingots to save space.");
+
+            btnSwitch.Getter = GetterBool;
+            btnSwitch.Setter = SetterBool;
+
+            btnSwitch.Enabled = (MyObjectBuilder_CargoContainer) => { return true; };
+            btnSwitch.Visible = (MyObjectBuilder_CargoContainer) => { return true; };
+
+            var slider = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlSlider, IMyCargoContainer>("terminal_compress_ratio");
+            slider.Title = MyStringId.GetOrCompute("Unpacked Amount");
+            slider.Tooltip = MyStringId.GetOrCompute("Tries to keep unpacked variants of Ores and Ingots at this level by either packing or unpacking.");
+            slider.Writer = SliderWriter;
+            slider.SetLimits(0f, 100000f);
+            slider.Getter = GetterFloat;
+            slider.Setter = SetterFloat;
+
+            slider.Enabled = (MyObjectBuilder_CargoContainer) => { return true; };
+            slider.Visible = (MyObjectBuilder_CargoContainer) => { return true; };
+
+
+            MyAPIGateway.TerminalControls.AddControl<IMyCargoContainer>(btnSwitch);
+            MyAPIGateway.TerminalControls.AddControl<IMyCargoContainer>(slider);
+        }
+
+        public override void UpdateBeforeSimulation100()
+        {
+            base.UpdateBeforeSimulation100();
+            if (block != null)
+            {
+                Store data = Store.FromString(block.CustomData);
+                if (!data.Pack) return;
+
+                items.Clear();
+                itemStore.Clear();
+                block.GetInventory(0).GetItems(items);
+                foreach (MyInventoryItem item in items)
+                {
+                    if (item.Type.TypeId.Equals("MyObjectBuilder_Ingot") || item.Type.TypeId.Equals("MyObjectBuilder_Ore"))
+                    {
+                        string typeString = MapId(item.Type.ToString());
+
+
+                        if (typeString.ToLower().Contains("scrap")) continue;
+                        if (!itemStore.ContainsKey(typeString))
+                        {
+                            itemStore[typeString] = new PackItem(typeString);
+                        }
+                        itemStore[typeString].Packed += PackItem.isPacked(item.Type.SubtypeId) ? (float)item.Amount : 0;
+                        itemStore[typeString].Unpacked += PackItem.isPacked(item.Type.SubtypeId) ? 0 : (float)item.Amount;
+                    }
+                }
+
+                foreach (PackItem item in itemStore.Values)
+                {
+                    Logging.Instance.WriteLine(item.BaseName + " " + item.Unpacked + "/" + item.Packed);
+                    if (item.Unpacked < data.PackAmount && item.Packed > 0)
+                    {
+                        float unpackAmount = data.PackAmount - item.Unpacked;
+                        float maxUnpack = Math.Min(item.Packed, unpackAmount / 1000);
+                        // TODO Auf Platz prüfen
+
+                        block.GetInventory(0).RemoveItemsOfType((MyFixedPoint)maxUnpack, item.PackedBuilder);
+                        block.GetInventory(0).AddItems((MyFixedPoint)(maxUnpack * 1000), item.UnpackedBuilder);
+                        block.GetInventory(0).GetI
+
+                    }
+                    else if (item.Unpacked > data.PackAmount)
+                    {
+                        float packAmount = item.Unpacked - data.PackAmount;
+
+                        block.GetInventory(0).RemoveItemsOfType((MyFixedPoint)packAmount, item.UnpackedBuilder);
+                        block.GetInventory(0).AddItems((MyFixedPoint)(packAmount / 1000), item.PackedBuilder);
+                    }
+                }
+            }
+        }
+
+        static string MapId(string typeId)
+        {
+            return typeId.Replace("/Pack", "/");
+        }
+
+        private bool GetterBool(IMyTerminalBlock myTerminalBlock)
+        {
+            Store data = Store.FromString(myTerminalBlock.CustomData);
+            return data.Pack;
+        }
+
+        private void SetterBool(IMyTerminalBlock myTerminalBlock, bool b)
+        {
+            Store data = Store.FromString(myTerminalBlock.CustomData);
+            data.Pack = b;
+            Store.Write(myTerminalBlock, data);
+        }
+
+        private void SetterFloat(IMyTerminalBlock myTerminalBlock, float f)
+        {
+            Store data = Store.FromString(myTerminalBlock.CustomData);
+            data.PackAmount = f;
+            Store.Write(myTerminalBlock, data);
+        }
+
+        private float GetterFloat(IMyTerminalBlock myTerminalBlock)
+        {
+            Store data = Store.FromString(myTerminalBlock.CustomData);
+            return data.PackAmount;
+        }
+
+        private void SliderWriter(IMyTerminalBlock myTerminalBlock, StringBuilder stringBuilder)
+        {
+            if (stringBuilder == null) stringBuilder = new StringBuilder();
+            Store data = Store.FromString(myTerminalBlock.CustomData);
+            stringBuilder.Append(data.PackAmount.ToString("0"));
+        }
+
+        public override void Init(MyObjectBuilder_EntityBase objectBuilder)
+        {
+            NeedsUpdate = MyEntityUpdateEnum.BEFORE_NEXT_FRAME | MyEntityUpdateEnum.EACH_100TH_FRAME;
+            block = Entity as IMyCargoContainer;
+
+        }
+
+        public override void UpdateOnceBeforeFrame()
+        {
+            //Do init and control creation here
+            if (!init)
+            {
+                Buttons();
+                init = true;
+            }
+        }
+    }
+
+    public class PackItem
+    {
+        public string BaseName;
+        public float Unpacked = 0;
+        public float Packed = 0;
+        public MyObjectBuilder_PhysicalObject PackedBuilder;
+        public MyObjectBuilder_PhysicalObject UnpackedBuilder;
+
+        public PackItem(string baseName)
+        {
+            this.BaseName = baseName;
+            PackedBuilder = GetItemBuilder(true);
+            UnpackedBuilder = GetItemBuilder(false);
+        }
+
+        public string From { get { return BaseName.Split('/')[1]; } }
+        public string To { get { return BaseName.Replace("/", "/Pack").Split('/')[1]; } }
+
+        public static bool isPacked(string name)
+        {
+            return name.StartsWith("Pack");
+        }
+
+        public MyObjectBuilder_PhysicalObject GetItemBuilder(bool packed)
+        {
+            if (BaseName.StartsWith("MyObjectBuilder_Ingot"))
+            {
+                return new MyObjectBuilder_Ingot() { SubtypeName = packed ? To : From };
+            }
+            else
+            {
+                return new MyObjectBuilder_Ore() { SubtypeName = packed ? To : From };
+            }
+        }
+    }
+
+    class Store
+    {
+        public bool Pack = false;
+        public float PackAmount = 10000;
+
+        public override string ToString()
+        {
+            return "#pack#" + Pack + "|" + PackAmount;
+        }
+
+        public static Store FromString(string input)
+        {
+            Store result = new Store();
+            string line = GetLine(input);
+            if (line != null)
+            {
+                string[] parts = line.Replace("#pack#", "").Split('|');
+                if (parts.Length == 2)
+                {
+                    bool.TryParse(parts[0], out result.Pack);
+                    float.TryParse(parts[1], out result.PackAmount);
+                }
+
+            }
+            return result;
+        }
+
+        private static string GetLine(string input)
+        {
+            string[] lines = input.Split('\n');
+            foreach (string line in lines)
+            {
+                if (line.StartsWith("#pack#")) return line;
+            }
+            return null;
+        }
+
+        public static void Write(IMyTerminalBlock block, Store newValue)
+        {
+            string old = GetLine(block.CustomData);
+            if (old != null)
+            {
+                block.CustomData = block.CustomData.Replace(old, newValue.ToString());
+            }
+            else
+            {
+                if (block.CustomData != null && block.CustomData != "")
+                {
+                    block.CustomData += "\n";
+                }
+                block.CustomData += newValue.ToString();
+            }
+        }
+    }
+}

@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Blueprints>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>StoneOreCompressed</SubtypeId>
+      </Id>
+      <DisplayName>Packed Stone</DisplayName>
+      <Icon>Textures\ore_rock_compressed.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3000" TypeId="Ore" SubtypeId="Stone" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Ore" SubtypeId="PackStone" />
+      <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>IceOreCompressed</SubtypeId>
+      </Id>
+      <DisplayName>Packed Ice</DisplayName>
+      <Icon>Textures\ore_H2O_ice_compressed.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3000" TypeId="Ore" SubtypeId="Ice" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Ore" SubtypeId="PackIce" />
+      <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+    </Blueprint>
+    
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>IronOreCompressed</SubtypeId>
+      </Id>
+      <DisplayName>Packed Iron Ore</DisplayName>
+      <Icon>Textures\ore_Fe_iron_compressed.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3000" TypeId="Ore" SubtypeId="Iron" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Ore" SubtypeId="PackIron" />
+      <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+    </Blueprint>
+    
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>NickelOreCompressed</SubtypeId>
+      </Id>
+      <DisplayName>Packed Nickel Ore</DisplayName>
+      <Icon>Textures\ore_Ni_nickel_compressed.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3000" TypeId="Ore" SubtypeId="Nickel" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Ore" SubtypeId="PackNickel" />
+      <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+    </Blueprint>
+    
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>CobaltOreCompressed</SubtypeId>
+      </Id>
+      <DisplayName>Packed Cobalt Ore</DisplayName>
+      <Icon>Textures\ore_Co_cobalt_compressed.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3000" TypeId="Ore" SubtypeId="Cobalt" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Ore" SubtypeId="PackCobalt" />
+      <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+    </Blueprint>
+    
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>MagnsiumOreCompressed</SubtypeId>
+      </Id>
+      <DisplayName>Packed Magnsium Ore</DisplayName>
+      <Icon>Textures\ore_Mg_magnesium_compressed.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3000" TypeId="Ore" SubtypeId="Magnesium" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Ore" SubtypeId="PackMagnesium" />
+      <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+    </Blueprint>
+    
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>SiliconOreCompressed</SubtypeId>
+      </Id>
+      <DisplayName>Packed Silicon Ore</DisplayName>
+      <Icon>Textures\ore_Si_silicon_compressed.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3000" TypeId="Ore" SubtypeId="Silicon" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Ore" SubtypeId="PackSilicon" />
+      <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+    </Blueprint>
+    
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>SilverOreCompressed</SubtypeId>
+      </Id>
+      <DisplayName>Packed Silver Ore</DisplayName>
+      <Icon>Textures\ore_Ag_silver_compressed.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3000" TypeId="Ore" SubtypeId="Silver" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Ore" SubtypeId="PackSilver" />
+      <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+    </Blueprint>
+    
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>GoldOreCompressed</SubtypeId>
+      </Id>
+      <DisplayName>Packed Gold Ore</DisplayName>
+      <Icon>Textures\ore_Au_gold_compressed.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3000" TypeId="Ore" SubtypeId="Gold" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Ore" SubtypeId="PackGold" />
+      <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+    </Blueprint>
+    
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>PlatinumOreCompressed</SubtypeId>
+      </Id>
+      <DisplayName>Packed Platinum Ore</DisplayName>
+      <Icon>Textures\ore_Pt_platinum_compressed.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3000" TypeId="Ore" SubtypeId="Platinum" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Ore" SubtypeId="PackPlatinum" />
+      <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+    </Blueprint>
+    
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>UraniumOreCompressed</SubtypeId>
+      </Id>
+      <DisplayName>Packed Uranium Ore</DisplayName>
+      <Icon>Textures\ore_UO2_uranite_compressed.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3000" TypeId="Ore" SubtypeId="Uranium" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Ore" SubtypeId="PackUranium" />
+      <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>StoneIngotCompressed</SubtypeId>
+      </Id>
+      <DisplayName>Packed Gravel</DisplayName>
+      <Icon>Textures\gravel_ingot_compressed.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3000" TypeId="Ingot" SubtypeId="Stone" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Ingot" SubtypeId="PackStone" />
+      <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>IronIngotCompressed</SubtypeId>
+      </Id>
+      <DisplayName>Packed Iron Ingots</DisplayName>
+      <Icon>Textures\iron_ingot_compressed.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3000" TypeId="Ingot" SubtypeId="Iron" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Ingot" SubtypeId="PackIron" />
+      <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>NickelIngotCompressed</SubtypeId>
+      </Id>
+      <DisplayName>Packed Nickel Ingots</DisplayName>
+      <Icon>Textures\nickel_ingot_compressed.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3000" TypeId="Ingot" SubtypeId="Nickel" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Ingot" SubtypeId="PackNickel" />
+      <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>CobaltIngotCompressed</SubtypeId>
+      </Id>
+      <DisplayName>Packed Cobalt Ingots</DisplayName>
+      <Icon>Textures\cobalt_ingot_compressed.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3000" TypeId="Ingot" SubtypeId="Cobalt" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Ingot" SubtypeId="PackCobalt" />
+      <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>MagnsiumIngotCompressed</SubtypeId>
+      </Id>
+      <DisplayName>Packed Magnsium Ingots</DisplayName>
+      <Icon>Textures\magnesium_ingot_compressed.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3000" TypeId="Ingot" SubtypeId="Magnesium" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Ingot" SubtypeId="PackMagnesium" />
+      <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>SiliconIngotCompressed</SubtypeId>
+      </Id>
+      <DisplayName>Packed Silicon Ingots</DisplayName>
+      <Icon>Textures\silicon_ingot_compressed.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3000" TypeId="Ingot" SubtypeId="Silicon" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Ingot" SubtypeId="PackSilicon" />
+      <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>SilverIngotCompressed</SubtypeId>
+      </Id>
+      <DisplayName>Packed Silver Ingots</DisplayName>
+      <Icon>Textures\silver_ingot_compressed.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3000" TypeId="Ingot" SubtypeId="Silver" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Ingot" SubtypeId="PackSilver" />
+      <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>GoldIngotCompressed</SubtypeId>
+      </Id>
+      <DisplayName>Packed Gold Ingots</DisplayName>
+      <Icon>Textures\gold_ingot_compressed.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3000" TypeId="Ingot" SubtypeId="Gold" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Ingot" SubtypeId="PackGold" />
+      <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>PlatinumIngotCompressed</SubtypeId>
+      </Id>
+      <DisplayName>Packed Platinum Ingots</DisplayName>
+      <Icon>Textures\platinum_ingot_compressed.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3000" TypeId="Ingot" SubtypeId="Platinum" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Ingot" SubtypeId="PackPlatinum" />
+      <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>UraniumIngotCompressed</SubtypeId>
+      </Id>
+      <DisplayName>Packed Uranium Ingots</DisplayName>
+      <Icon>Textures\uranium_ingot_compressed.dds</Icon>
+      <Prerequisites>
+        <Item Amount="3000" TypeId="Ingot" SubtypeId="Uranium" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Ingot" SubtypeId="PackUranium" />
+      <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+  </Blueprints>
+</Definitions>

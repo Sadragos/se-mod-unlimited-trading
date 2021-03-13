@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<Definitions>
+    <BlueprintClasses>
+      <Class>
+        <Id>
+          <TypeId>BlueprintClassDefinition</TypeId>
+          <SubtypeId>Compressed</SubtypeId>
+        </Id>
+        <DisplayName>Compressed Packages</DisplayName>
+        <Icon>Textures\compressed.dds</Icon>
+        <HighlightIcon>Textures\compressed_focus.dds</HighlightIcon>
+      </Class>
+
+
+    </BlueprintClasses>
+
+    <BlueprintClassEntries>
+
+      <Entry Class="Compressed" BlueprintSubtypeId="StoneOreCompressed" />
+      <Entry Class="Compressed" BlueprintSubtypeId="IceOreCompressed" />
+      
+      <Entry Class="Compressed" BlueprintSubtypeId="IronOreCompressed" />
+      <Entry Class="Compressed" BlueprintSubtypeId="NickelOreCompressed" />
+      <Entry Class="Compressed" BlueprintSubtypeId="CobaltOreCompressed" />
+      <Entry Class="Compressed" BlueprintSubtypeId="MagnsiumOreCompressed" />
+      <Entry Class="Compressed" BlueprintSubtypeId="SiliconOreCompressed" />
+      <Entry Class="Compressed" BlueprintSubtypeId="SilverOreCompressed" />
+      <Entry Class="Compressed" BlueprintSubtypeId="GoldOreCompressed" />
+      <Entry Class="Compressed" BlueprintSubtypeId="PlatinumOreCompressed" />
+      <Entry Class="Compressed" BlueprintSubtypeId="UraniumOreCompressed" />
+
+      <Entry Class="Compressed" BlueprintSubtypeId="StoneIngotCompressed" />
+      <Entry Class="Compressed" BlueprintSubtypeId="IronIngotCompressed" />
+      <Entry Class="Compressed" BlueprintSubtypeId="NickelIngotCompressed" />
+      <Entry Class="Compressed" BlueprintSubtypeId="CobaltIngotCompressed" />
+      <Entry Class="Compressed" BlueprintSubtypeId="MagnsiumIngotCompressed" />
+      <Entry Class="Compressed" BlueprintSubtypeId="SiliconIngotCompressed" />
+      <Entry Class="Compressed" BlueprintSubtypeId="SilverIngotCompressed" />
+      <Entry Class="Compressed" BlueprintSubtypeId="GoldIngotCompressed" />
+      <Entry Class="Compressed" BlueprintSubtypeId="PlatinumIngotCompressed" />
+      <Entry Class="Compressed" BlueprintSubtypeId="UraniumIngotCompressed" />
+
+    </BlueprintClassEntries>
+
+
+</Definitions>
